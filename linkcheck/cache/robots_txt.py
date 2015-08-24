@@ -44,6 +44,7 @@ class RobotsTxt (object):
 
     def allows_url (self, url_data):
         """Ask robots.txt allowance."""
+        return True
         roboturl = url_data.get_robots_txt_url()
         with self.get_lock(roboturl):
             return self._allows_url(url_data, roboturl)
